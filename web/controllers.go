@@ -2,6 +2,7 @@ package web
 
 import (
 	"net/http"
+	"time"
 	"tjweldon/infi-site/page"
 )
 
@@ -16,6 +17,7 @@ func echoPath(w http.ResponseWriter, r *http.Request) {
 	}
 
 	w.Header().Set("Content-Type", "application/html")
+	time.Sleep(300 * time.Millisecond)
 }
 
 var EchoPath = (Controller)(echoPath)
